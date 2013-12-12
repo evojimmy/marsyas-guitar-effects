@@ -11,6 +11,7 @@ void sfplay (string name, mrs_real amount) {
   MarSystemManager mng;
 
   MarSystem* net = mng.create("Series", "net");
+  net->updControl("mrs_real/israte", 48000.0);
 
   //net->addMarSystem(mng.create("SoundFileSource", "src"));
   //net->updctrl("SoundFileSource/src/mrs_string/filename", sfName);

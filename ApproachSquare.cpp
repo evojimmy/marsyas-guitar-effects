@@ -29,9 +29,9 @@ void ApproachSquare::addControls (void)
 
 void ApproachSquare::myUpdate (MarControlPtr sender)
 {
-  (void) sender;
   amount_ = ctrl_amount_->to<mrs_natural>();
   _amount_ = amount_ * 2 + 2;
+  MarSystem::myUpdate(sender);
 }
 
 void ApproachSquare::myProcess (realvec& in, realvec& out)

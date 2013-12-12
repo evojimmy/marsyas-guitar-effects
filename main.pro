@@ -18,6 +18,6 @@ LIBPATH += /home/jimmy/mir/marsyas/build/lib/
 #LIBPATH += $$MARSYAS_INSTALL_DIR/lib/
 ### basic OS stuff; do not change!
 win32-msvc2005:LIBS += marsyas.lib
-unix:LIBS += -lmarsyas -L$$MARSYAS_INSTALL_DIR/lib
+unix:LIBS += -lmarsyas -L$$MARSYAS_INSTALL_DIR/lib -ljack
 !macx:LIBS += -lasound
 macx:LIBS += -framework CoreAudio -framework CoreMidi -framework CoreFoundation

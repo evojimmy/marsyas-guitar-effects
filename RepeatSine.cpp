@@ -29,8 +29,8 @@ void RepeatSine::addControls (void)
 
 void RepeatSine::myUpdate (MarControlPtr sender)
 {
-  (void) sender;
   amount_ = ctrl_amount_->to<mrs_natural>();
+  MarSystem::myUpdate(sender);
 }
 
 void RepeatSine::myProcess (realvec& in, realvec& out)

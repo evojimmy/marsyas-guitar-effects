@@ -29,8 +29,8 @@ void Cutoff::addControls (void)
 
 void Cutoff::myUpdate (MarControlPtr sender)
 {
-  (void) sender;
   amount_ = ctrl_amount_->to<mrs_real>();
+  MarSystem::myUpdate(sender);
 }
 
 void Cutoff::myProcess (realvec& in, realvec& out)
